@@ -42,7 +42,7 @@ class Command(AppCommand):
         if sys.version_info[0] != 3 or sys.version_info[1] < 5:
             raise CommandError('Python 3.5 or newer is required')
 
-        if django.VERSION[1] >= 11 or django.VERSION[0] in [2, 3]:
+        if django.VERSION[1] >= 11 or django.VERSION[0] in [2, 3, 4, 5]:
             force = options['force']
             fmt = options['format']
             depth = options['depth']
